@@ -1,20 +1,25 @@
 import React, { useState,Fragment } from 'react';
 import './CardsThrow.css'
-import ZodiacInformation from '../../data/zodiac-info.json'
 import TarotInformation from '../../data/tarot.json'
 import { Button } from 'react-bootstrap';
+import Spinner from '../Spinner/Spinner';
 
 function CardsThrow(props) {
     const cargarImagen = require.context("../../img/CardThrow", true);
     const [showTarot, setShowTarot] = useState(false)
+    const [loading, setLoading] = useState(false)
 
     function generateRandom(max) {
         return Math.floor(Math.random() * max);
     }
 
     function tarotToggle() {
-        setShowTarot(!showTarot)
-        props.showButtons(true)
+        setLoading(true)
+        setTimeout(function() {
+            setShowTarot(!showTarot)
+            props.showButtons(true)
+            setLoading(false)
+        }, 3000)
     }
 
     return (
@@ -30,6 +35,7 @@ function CardsThrow(props) {
                 : null }
                 <img className='cards-throw-card-img2' src={cargarImagen('./cards.png')} alt='imagen signo' />
             </div>
+            { loading ? <Spinner /> : null }
             { showTarot ? <Fragment>
                 <div className='row cards-throw-tarot'>
                     <div className='cards-throw-tarot-img'>
