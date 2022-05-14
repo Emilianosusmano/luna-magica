@@ -1,0 +1,44 @@
+.header {
+    margin: 0;
+    color: #FFF;
+    width: 100%;
+    min-height: 60vh;
+    text-align: center;
+    background: linear-gradient(to top, #532ef7ba, #071ffacc), url("../../img/bola-magica.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.header .header-text {
+    width: 100%;
+    margin: auto;
+}
+
+.header .titles {
+    background: linear-gradient(to top, #f72ed266, #fa07de40);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.header .titles h1 {
+    font-family: 'Water Brush', cursive;
+    font-size: 5rem;
+}
+
+.header .titles h2 {
+    font-size: 2rem;
+}
+
+.header .header-text .paragraph {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 2px;
+    width: 100%;
+    min-height: fit-content;
+    margin-top: 40px;
+    font-size: 1.5rem;
+}

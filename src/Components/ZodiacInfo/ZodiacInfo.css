@@ -1,0 +1,42 @@
+.zodiac-info {
+    display: flex;
+    flex-direction: column;
+    color: #FFF
+}
+
+.zodiac-info .zodiac-img {
+    margin: 3rem auto 3rem auto;
+    max-width: 300px;
+    border-radius: 20%;
+}
+
+.zodiac-info .zodiac-title {
+    margin: 2rem 0 2rem 0;
+    font-family: 'Macondo', cursive;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.zodiac-info .zodiac-text {
+    margin: 2rem 0 2rem 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.zodiac-info .zodiac-subtitle {
+    margin: 2rem 0 2rem 0;
+    font-family: 'Macondo', cursive;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.zodiac-info .zodiac-list {
+    list-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+}
+
+.zodiac-info .zodiac-list .zodiac-list-item {
+    margin: 0.5rem 0 1rem 0;
+}

@@ -1,0 +1,101 @@
+.cards-throw {
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+    margin-top: 70px;
+}
+
+.cards-throw .cards-throw-title {
+    font-family: 'Water Brush', cursive;
+    font-size: 5rem;
+}
+
+.cards-throw .cards-throw-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cards-throw .cards-throw-button-container .cards-throw-card-img1 {
+    width: 30%;
+}
+
+.cards-throw .cards-throw-button-container .cards-throw-card-img2 {
+    width: 30%;
+    transform: scaleX(-1);
+}
+
+.cards-throw .cards-throw-button-container .cards-throw-btn {
+    width: 30%;
+    background-color: transparent;
+    border-color: transparent;
+    display: flex;
+    flex-direction: column;
+}
+
+.cards-throw .cards-throw-button-container .cards-throw-btn .cards-throw-btn-img {
+    width: 80%;
+    margin: auto;
+}
+
+.cards-throw .cards-throw-button-container .cards-throw-btn .cards-throw-btn-text {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    color: #2f04a4;
+    text-shadow: -1px 1px #ffffff, -1px -1px #ffffff, 1px -1px #ffffff, 1px 1px #f3f3f2, 3px 3px #6ac7c2;
+    margin: auto;
+    letter-spacing: 0.1rem;
+}
+
+.cards-throw .cards-throw-tarot {
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+    justify-content: space-evenly;
+}
+
+.cards-throw .cards-throw-tarot .cards-throw-tarot-img {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.cards-throw .cards-throw-tarot .zodiac-img {
+    margin: auto;
+    width: 80%;
+}
+
+.cards-throw .cards-throw-tarot .zodiac-img-label {
+    margin: auto;
+    font-size: 30px;
+}
+
+.cards-throw .cards-throw-result {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.cards-throw .cards-throw-result .cards-throw-tarot-text {
+    font-size: 20px;
+}
+
+.cards-throw .cards-throw-result .cards-throw-btn-download {}
+
+@media (max-width: 988px) {
+    .cards-throw .cards-throw-button-container .cards-throw-btn .cards-throw-btn-text {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-throw .cards-throw-button-container .cards-throw-btn .cards-throw-btn-text {
+        font-size: 15px;
+    }
+
+    .cards-throw .cards-throw-tarot .zodiac-img-label {
+        font-size: 20px;
+    }
+}
