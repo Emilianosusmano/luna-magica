@@ -22,6 +22,10 @@ function CardsThrow(props) {
         }, 3000)
     }
 
+    const tarotPast = TarotInformation.Pasado[generateRandom(TarotInformation.Pasado.length)];
+    const tarotPresent = TarotInformation.Presente[generateRandom(TarotInformation.Presente.length)];
+    const tarotFuture = TarotInformation.Futuro[generateRandom(TarotInformation.Futuro.length)];
+
     return (
         <div className='container cards-throw'>
             <h2 className='cards-throw-title'>Tirada de cartas</h2>
@@ -39,25 +43,28 @@ function CardsThrow(props) {
             { showTarot ? <Fragment>
                 <div className='row cards-throw-tarot'>
                     <div className='cards-throw-tarot-img'>
-                        <img className='zodiac-img' src={cargarImagen('./Pasado.png')} alt='imagen signo' />
+                        <img className='zodiac-img' src={cargarImagen(`./${tarotPast.card}.png`)} alt='imagen signo' />
                         <label className='zodiac-img-label'>Pasado</label>
+                        <label className='zodiac-img-name'>{tarotPast.card}</label>
                     </div>
                     <div className='cards-throw-tarot-img'>
-                        <img className='zodiac-img' src={cargarImagen('./Presente.png')} alt='imagen signo' />
+                        <img className='zodiac-img' src={cargarImagen(`./${tarotPresent.card}.png`)} alt='imagen signo' />
                         <label className='zodiac-img-label'>Presente</label>
+                        <label className='zodiac-img-name'>{tarotPresent.card}</label>
                     </div>
                     <div className='cards-throw-tarot-img'>
-                        <img className='zodiac-img' src={cargarImagen('./Futuro.png')} alt='imagen signo' />
+                        <img className='zodiac-img' src={cargarImagen(`./${tarotFuture.card}.png`)} alt='imagen signo' />
                         <label className='zodiac-img-label'>Futuro</label>
+                        <label className='zodiac-img-name'>{tarotFuture.card}</label>
                     </div>
                 </div>
                 <div className='cards-throw-result'>
                     <h4 className='cards-throw-tarot-subtitle'>Presente</h4>
-                    <p className='cards-throw-tarot-text'>{TarotInformation.Pasado[generateRandom(TarotInformation.Pasado.length)]}</p>
+                    <p className='cards-throw-tarot-text'>{tarotPast.description}</p>
                     <h4 className='cards-throw-tarot-subtitle'>Pasado</h4>
-                    <p className='cards-throw-tarot-text'>{TarotInformation.Presente[generateRandom(TarotInformation.Presente.length)]}</p>
+                    <p className='cards-throw-tarot-text'>{tarotPresent.description}</p>
                     <h4 className='cards-throw-tarot-subtitle'>Futuro</h4>
-                    <p className='cards-throw-tarot-text'>{TarotInformation.Futuro[generateRandom(TarotInformation.Futuro.length)]}</p>
+                    <p className='cards-throw-tarot-text'>{tarotPresent.description}</p>
                 </div>
             </Fragment> : null }
         </div>

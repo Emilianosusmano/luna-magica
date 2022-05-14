@@ -71,6 +71,11 @@
     font-size: 30px;
 }
 
+.cards-throw .cards-throw-tarot .zodiac-img-name {
+    margin: auto;
+    font-size: 20px;
+}
+
 .cards-throw .cards-throw-result {
     margin-top: 50px;
     display: flex;

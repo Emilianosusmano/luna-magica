@@ -1,23 +1,68 @@
 {
     "Pasado": [
-        "Tuviste muchos problemas pero supiste encontrar el camino pararesolverlos y crecer.",
-        "Nunca permitas que las lagrimas de tu pasado borren la sonrisa de tu presente.",
-        "Tu pasado no determina tu futuro, en cualquier momento puedes tomar una decisión y cambiar el rumbo de tu vida",
-        "Olvidar el pasado es la mejor manera de afrontar el futuro.",
-        "Estudia el pasado si quieres pronosticar el futuro."
+        {
+            "card": "El Diablo",
+            "description": "Tuviste muchos problemas pero supiste encontrar el camino pararesolverlos y crecer."
+        },
+        {
+            "card": "El Ermitanio",
+            "description": "Nunca permitas que las lagrimas de tu pasado borren la sonrisa de tu presente."
+        },
+        {
+            "card": "El Loco",
+            "description": "Tu pasado no determina tu futuro, en cualquier momento puedes tomar una decisión y cambiar el rumbo de tu vida"
+        },
+        {
+            "card": "El Mago",
+            "description": "Olvidar el pasado es la mejor manera de afrontar el futuro."
+        },
+        {
+            "card": "El Sacerdote",
+            "description": "Estudia el pasado si quieres pronosticar el futuro."
+        }
     ],
     "Presente": [
-        "Es un momento propicio para el trabajo y el estudio, en especialpara hacer trabajos prácticos atrasados de React.",
-        "No permitas que las sombras del pasado oscurezcan tu presente",
-        "La vida no consiste en recordar el pasado con nostalgia, ni esperar el futuro con ansiedad. ¡Sino en vivir el presente con pasion!",
-        "El arte de la vida es vivir en el momento presente.",
-        "Tu futuro lo creas aquí en el presente con cada decisión que tomas."
+        {
+            "card": "El Sol",
+            "description": "Es un momento propicio para el trabajo y el estudio, en especialpara hacer trabajos prácticos atrasados de React."
+        },
+        {
+            "card": "La Emperatriz",
+            "description": "No permitas que las sombras del pasado oscurezcan tu presente"
+        },
+        {
+            "card": "La Fuerza",
+            "description": "La vida no consiste en recordar el pasado con nostalgia, ni esperar el futuro con ansiedad. ¡Sino en vivir el presente con pasion!"
+        },
+        {
+            "card": "La Justicia",
+            "description": "El arte de la vida es vivir en el momento presente."
+        },
+        {
+            "card": "La Muerte",
+            "description": "Tu futuro lo creas aquí en el presente con cada decisión que tomas."
+        }
     ],
     "Futuro": [
-        "Se ve un certificado de aprobación de una cursada muyimportante, pero es necesario dedicarle el tiempo para disfrutar delos logros.",
-        "El futuro peretenece a aquellos que creen en la belleza de sus sueños.",
-        "El momento en el que dejas de preocuparte por lo que va a pasar empiezas a disfrutar de lo que está pasando.",
-        "La mejor manera de predecir el futuro es crearlo.",
-        "Es más divertido pensar en el futuro que cavar en el pasado."
+        {
+            "card": "La Sacerdotisa",
+            "description": "Se ve un certificado de aprobación de una cursada muyimportante, pero es necesario dedicarle el tiempo para disfrutar delos logros."
+        },
+        {
+            "card": "La Templanza",
+            "description": "El futuro peretenece a aquellos que creen en la belleza de sus sueños."
+        },
+        {
+            "card": "Los Enamorados",
+            "description": "El momento en el que dejas de preocuparte por lo que va a pasar empiezas a disfrutar de lo que está pasando."
+        },
+        {
+            "card": "Rueda de la Fortuna",
+            "description": "La mejor manera de predecir el futuro es crearlo."
+        },
+        {
+            "card": "El Mundo",
+            "description": "Es más divertido pensar en el futuro que cavar en el pasado."
+        }
     ]
 }

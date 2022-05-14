@@ -79,15 +79,15 @@ function ZodiacInfo(props) {
         <li className="zodiac-list-item">
           <strong>Amor</strong>
         </li>
-        <li className="zodiac-list-item">{zodiac.love}</li>
+        <li className="zodiac-list-item">{zodiac[props.gender.toUpperCase()].love}</li>
         <li className="zodiac-list-item">
           <strong>Trabajo</strong>
         </li>
-        <li className="zodiac-list-item">{zodiac.job}</li>
+        <li className="zodiac-list-item">{zodiac[props.gender.toUpperCase()].job}</li>
         <li className="zodiac-list-item">
           <strong>Tips</strong>
         </li>
-        <li className="zodiac-list-item">{zodiac.tips}</li>
+        <li className="zodiac-list-item">{zodiac[props.gender.toUpperCase()].tips}</li>
         <li className="zodiac-list-item">
           <strong>Numero de la Suerte</strong>
         </li>

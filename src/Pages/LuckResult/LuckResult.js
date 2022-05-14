@@ -6,6 +6,7 @@ import { Button } from "react-bootstrap";
 import "./LuckResult.css";
 import CardsThrow from "../../Components/CardsThrow/CardsThrow";
 import html2pdf from "html2pdf.js";
+import PersonalInfo from "../../Components/PersonalInfo/PersonalInfo";
 
 function LuckResult({ params }) {
   const { name, age, gender, birthDate } = params;
@@ -39,7 +40,8 @@ function LuckResult({ params }) {
   return (
     <>
       <div className="luck-result" id="luck-result">
-        <ZodiacInfo zodiac={zodiac} name={name} />
+        <PersonalInfo name={name} age={age} gender={gender} birthDate={birthDate} />
+        <ZodiacInfo zodiac={zodiac} name={name} gender={gender} />
         <CardsThrow showButtons={setShowButtons}/>
       </div>
       {showButtons ? (
@@ -50,7 +52,7 @@ function LuckResult({ params }) {
             onClick={printDocument}
             variant="outline-dark"
           >
-            Descargar info en PDF
+            Descargar informacion en PDF
           </Button>
           <Button
             type="button"
