@@ -1,18 +1,29 @@
 import React from "react";
+import Icon from '@mdi/react';
+import './Footer.css'
+import { mdiLinkedin, mdiEmail } from '@mdi/js';
 
-function Footer(props) {
-    const { name, age, gender, birthDate } = props;
-    const newBirthDate = birthDate.split("-");
+function Footer() {
 
     return (
-        <div className="card">
-            <div className="card-body">
-                <h5 className="card-title">{name.replace("%20", " ")}</h5>
-                <p className="card-text">Edad: {age}.</p>
-                <p className="card-text">Genero: {gender == 'm' ? "Masculino" : gender == 'f' ? "Femenino" : "No Binario"}.</p>
-                <p className="card-text">Fecha de nacimiento: {newBirthDate[2]}/{newBirthDate[1]}/{newBirthDate[0]}.</p>
+        <footer className="container footer">
+            <hr className="line" />
+            <div className="contact">
+                <a
+                    className="contact-item"
+                    href="https://www.linkedin.com/in/emilianosusmano/"
+                    target="_blank"
+                ><Icon path={mdiLinkedin} size="24px" /> Linkedin</a
+                >
+                <a
+                    className="contact-item"
+                    href="mailto:emilianosusmano@gmail.com"
+                    target="_blank"
+                ><Icon path={mdiEmail} size="24px" /> Correo electrónico</a
+                >
             </div>
-        </div>
+            <span className="mt-3 mb-3">Emiliano Susmano</span>
+        </footer>
     );
 }
 

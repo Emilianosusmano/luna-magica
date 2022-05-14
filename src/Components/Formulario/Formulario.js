@@ -30,13 +30,13 @@ function Formulario() {
     }
 
     if (name === "gender") {
-        if (!regexGender.test(value) && value.length > 0) {
-          setErrorMessage("El genero solo puede completarse con F (Femenino), M (Masculino) o N (No binario)")
-          return false;
-        } else {
-          setErrorMessage('')
-        }
+      if (!regexGender.test(value) && value.length > 0) {
+        setErrorMessage("El genero solo puede completarse con F (Femenino), M (Masculino) o N (No binario)")
+        return false;
+      } else {
+        setErrorMessage('')
       }
+    }
 
     const newValues = {
       ...formValues,
@@ -126,16 +126,16 @@ function Formulario() {
             onChange={handleChange}
           />
         </Form.Group>
-        <Button type="submit" className="form-button">
-          <img className="form-button-img mb-3" src={buttonImg} alt="Boton consulta" />
-        </Button>
-        <span className="form-button-txt">Consultá tu Horoscopo</span>
-        {errorMessage !== "" ? (
+        {errorMessage !== "" ?
           <Mancheta
             errorMessage={errorMessage}
             setErrorMessage={setErrorMessage}
           />
-        ) : null}
+          : null}
+        <Button type="submit" className="form-button">
+          <img className="form-button-img mb-3" src={buttonImg} alt="Boton consulta" />
+        </Button>
+        <span className="form-button-txt">Consultá tu Horoscopo</span>
       </Form>
     </div>
   );

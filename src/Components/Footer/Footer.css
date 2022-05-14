@@ -1,0 +1,23 @@
+.footer {
+    width: 100%;
+}
+
+.footer .line {
+    width: 100%;
+}
+
+.footer .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.footer .contact .contact-item{
+    text-decoration: none;
+    color: #4e3bfa;
+}
+
+.footer .contact .contact-item:hover{
+    color: #7566fc;
+}
