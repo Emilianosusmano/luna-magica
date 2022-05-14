@@ -1,7 +1,7 @@
 .cards-throw {
     display: flex;
     flex-direction: column;
-    color: #FFF;
+    color: #2d4069;
     margin-top: 70px;
 }
 
@@ -81,8 +81,6 @@
 .cards-throw .cards-throw-result .cards-throw-tarot-text {
     font-size: 20px;
 }
-
-.cards-throw .cards-throw-result .cards-throw-btn-download {}
 
 @media (max-width: 988px) {
     .cards-throw .cards-throw-button-container .cards-throw-btn .cards-throw-btn-text {

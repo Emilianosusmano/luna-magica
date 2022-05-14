@@ -27,7 +27,7 @@ export function ZodiacCalculation(date) {
     } else if (transformedDate >= "0121" && transformedDate <= "0219") {
         zodiacSign = "Acuario"
     } else if (transformedDate >= "0220" && transformedDate <= "0320") {
-        zodiacSign = "Picis"
+        zodiacSign = "Piscis"
     }
     return zodiacSign;
 }

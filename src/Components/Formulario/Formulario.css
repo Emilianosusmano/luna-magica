@@ -1,9 +1,9 @@
 .form-title {
-   color: #FFF;
+   color: #2d4069;
 }
 
 .form1 .input-item {
-   color: #FFF;
+   color: #2d4069;
    display: flex;
    flex-direction: column;
 }
@@ -68,7 +68,7 @@
 }
 
 .form1 .form-button:hover {
-   background: #f133cb;
+   background: #b3cbff;
 }
 
 .form1 .form-button-img {
@@ -76,7 +76,7 @@
 }
 
 .form1 .form-button-txt {
-   color: #FFF;
+   color: #2d4069;
    font-size: larger;
 }
 

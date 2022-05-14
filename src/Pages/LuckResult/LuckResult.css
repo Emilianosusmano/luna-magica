@@ -1,3 +1,9 @@
-.luck-result .btn .btn-outline-light .delete-background {
+.btn-primary {
     background-color: transparent;
+}
+
+.luck-button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
