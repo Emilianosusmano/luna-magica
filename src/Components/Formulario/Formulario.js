@@ -66,7 +66,7 @@ function Formulario() {
       tuvoError = true;
     }
     if (formValues.gender === "") {
-      errorText += " genero (F o M)";
+      errorText += " genero F (Femenino), M (Masculino) o N (No binario)";
       tuvoError = true;
     }
     if (formValues.birthDate === "" || formValues.birthDate === undefined) {
