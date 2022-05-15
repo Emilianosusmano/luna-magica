@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ZodiacInfo from "../../Components/ZodiacInfo/ZodiacInfo";
 import { ZodiacCalculation } from "../../Utils/Utils";
 import { useLocation } from "wouter";
@@ -10,11 +10,22 @@ import PersonalInfo from "../../Components/PersonalInfo/PersonalInfo";
 
 function LuckResult({ params }) {
   const { name, age, gender, birthDate } = params;
+
+  // Uso un efecto para ir al toop de la pagina al renderizarla
+  useEffect(function() {
+    window.scrollTo(0, 0);
+  }, [])
+
+  // Constante para manejar la redireccion del componente
   const [path, pushLocation] = useLocation();
+
+  // Estados del componente
   const [showButtons, setShowButtons] = useState(false);
 
+  // Constante donde se almacena el signo segun la fecha de nacimiento
   const zodiac = ZodiacCalculation(birthDate);
 
+  // Metodo para imprimir el documento
   const printDocument = (e) => {
     e.preventDefault();
     html2pdf(document.getElementById("luck-result"), {
@@ -33,6 +44,7 @@ function LuckResult({ params }) {
     });
   };
 
+  // Metodo para redireccion a la pagina anterior y realizar una nueva consulta
   function goBack() {
     pushLocation("/homepage");
   }

@@ -1,7 +1,10 @@
 import React from "react";
 
 function PersonalInfo(props) {
+    // Estados del componente
     const { name, age, gender, birthDate } = props;
+
+    // Se baja el valor dela fecha de nacimiento a una variable para darle formato y mejorar la visibilidad
     const newBirthDate = birthDate.split("-");
 
     return (

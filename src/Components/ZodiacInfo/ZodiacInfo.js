@@ -1,49 +1,16 @@
 import React from "react";
 import "./ZodiacInfo.css";
 import ZodiacInformation from "../../data/zodiac-info.json";
-import { getValueOfLetter } from "../../Utils/Utils";
+import { calculateLuckyNumber } from "../../Utils/Utils";
 
 function ZodiacInfo(props) {
+  // Constante para cargar el directorio de imagenes
   const cargarImagen = require.context("../../img/Zodiac", true);
 
+  // Se selecciona la informacion a mostrar desde el .json filtrando por signo seleccionado
   const zodiac = ZodiacInformation.filter((sign) => {
     return sign.id === props.zodiac;
   })[0];
-
-  function calculateLuckyNumber(nameOfPerson) {
-    var number = 0;
-    var names = nameOfPerson.split("%20");
-
-    names.forEach((letter) => (number += sumLuckyWord(letter)));
-
-    while (number > 9 && number !== 11 && number !== 22 && number !== 33) {
-      number = sumDigitsOfNumber(number);
-    }
-
-    return number;
-  }
-
-  function sumLuckyWord(word) {
-    var number = 0;
-    var name = word.toLowerCase();
-    for (var i = 0; i < name.length; i++) {
-      number += getValueOfLetter(name.charAt(i));
-    }
-
-    while (number > 9) {
-      number = sumDigitsOfNumber(number);
-    }
-    return number;
-  }
-
-  function sumDigitsOfNumber(number) {
-    let res = 0;
-    number
-      .toString()
-      .split("")
-      .forEach((c) => (res += parseInt(c)));
-    return res;
-  }
 
   return (
     <div className=" container zodiac-info">

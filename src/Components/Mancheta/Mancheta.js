@@ -1,6 +1,7 @@
 import React from 'react';
 
 function Mancheta(props) {
+    // Metodo para informar al componente que lo invoque que se debe borrar el texto de error al cerrar la mancheta
     function closeAlert() {
         props.setErrorMessage('');
     }

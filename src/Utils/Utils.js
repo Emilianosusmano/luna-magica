@@ -1,3 +1,4 @@
+// Metodo para calcular el signo segun la fecha de nacimiento
 export function ZodiacCalculation(date) {
     var splitedDate = date.split('-');
     const transformedDate = splitedDate[1] + splitedDate[2];
@@ -32,7 +33,51 @@ export function ZodiacCalculation(date) {
     return zodiacSign;
 }
 
-export function getValueOfLetter(letter) {
+// Metodo para generar un numero aleatorio con un maximo determinado
+export function generateRandom(max) {
+    return Math.floor(Math.random() * max);
+}
+
+ // Metodo para calcular el numero de la suerte, dejando numeros de un digito a menos que sean 11, 22 y 33 que son numeros especiales en la numerologia
+ export function calculateLuckyNumber(nameOfPerson) {
+    var number = 0;
+    var names = nameOfPerson.split("%20");
+
+    names.forEach((letter) => (number += sumLuckyWord(letter)));
+
+    while (number > 9 && number !== 11 && number !== 22 && number !== 33) {
+      number = sumDigitsOfNumber(number);
+    }
+
+    return number;
+  }
+
+  // Metodo auxiliar para calcular el numero de la suerte
+  function sumLuckyWord(word) {
+    var number = 0;
+    var name = word.toLowerCase();
+    for (var i = 0; i < name.length; i++) {
+      number += getValueOfLetter(name.charAt(i));
+    }
+
+    while (number > 9) {
+      number = sumDigitsOfNumber(number);
+    }
+    return number;
+  }
+
+  // Metodo auxiliar para calcular el numero de la suerte
+  function sumDigitsOfNumber(number) {
+    let res = 0;
+    number
+      .toString()
+      .split("")
+      .forEach((c) => (res += parseInt(c)));
+    return res;
+  }
+
+  // Metodo auxiliar para calcular el numero de la suerte
+  function getValueOfLetter(letter) {
     var hashmap = new Map();
     hashmap.set('a', 1);
     hashmap.set('b', 2);

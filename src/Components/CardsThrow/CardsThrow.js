@@ -3,16 +3,17 @@ import './CardsThrow.css'
 import TarotInformation from '../../data/tarot.json'
 import { Button } from 'react-bootstrap';
 import Spinner from '../Spinner/Spinner';
+import { generateRandom } from '../../Utils/Utils'
 
 function CardsThrow(props) {
+    // Constante para cargar el directorio de imagenes
     const cargarImagen = require.context("../../img/CardThrow", true);
+    
+    // Estados del componente
     const [showTarot, setShowTarot] = useState(false)
     const [loading, setLoading] = useState(false)
 
-    function generateRandom(max) {
-        return Math.floor(Math.random() * max);
-    }
-
+    // Metodo para cargar el Spinner y mostrar botones de descarga en la vista principal
     function tarotToggle() {
         setLoading(true)
         setTimeout(function() {
@@ -22,6 +23,7 @@ function CardsThrow(props) {
         }, 3000)
     }
 
+    // Elementos obtenidos aleatoriamente para mostrar la informacion de la tirada de cartas
     const tarotPast = TarotInformation.Pasado[generateRandom(TarotInformation.Pasado.length)];
     const tarotPresent = TarotInformation.Presente[generateRandom(TarotInformation.Presente.length)];
     const tarotFuture = TarotInformation.Futuro[generateRandom(TarotInformation.Futuro.length)];

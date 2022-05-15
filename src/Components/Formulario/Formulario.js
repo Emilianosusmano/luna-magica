@@ -6,6 +6,7 @@ import Mancheta from "../Mancheta/Mancheta";
 import { useLocation } from "wouter";
 
 function Formulario() {
+  // Estados del componente
   const [path, pushLocation] = useLocation();
   const [formValues, setFormValues] = useState({
     name: "",
@@ -15,6 +16,7 @@ function Formulario() {
   });
   const [errorMessage, setErrorMessage] = useState("");
 
+  // Metodo para manejar los cambios de estado de los inputs del formulario y guardar sus valores en el estado actual
   function handleChange(evt) {
     const { name, value } = evt.target;
     let regexName = new RegExp("^[a-zA-Z ]+$");
@@ -45,6 +47,7 @@ function Formulario() {
     setFormValues(newValues);
   }
 
+  // Metodo para manejar el submit del formulario y la redireccion a la pagina de resultados
   const handleSubmit = (evt) => {
     evt.preventDefault();
     if (!formValidate()) {
@@ -54,6 +57,7 @@ function Formulario() {
     }
   };
 
+  // Metodo para validar los datos del formulario y mostrar texto informativo en caso de datos erroneos
   function formValidate() {
     var tuvoError = false;
     var errorText = "Son todos los campos obligatorios, le falto completar";
