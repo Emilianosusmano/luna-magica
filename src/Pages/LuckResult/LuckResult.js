@@ -12,9 +12,9 @@ function LuckResult({ params }) {
   const { name, age, gender, birthDate } = params;
 
   // Uso un efecto para ir al toop de la pagina al renderizarla
-  useEffect(function() {
+  useEffect(function () {
     window.scrollTo(0, 0);
-  }, [])
+  }, []);
 
   // Constante para manejar la redireccion del componente
   const [path, pushLocation] = useLocation();
@@ -52,27 +52,24 @@ function LuckResult({ params }) {
   return (
     <>
       <div className="luck-result" id="luck-result">
-        <PersonalInfo name={name} age={age} gender={gender} birthDate={birthDate} />
+        <PersonalInfo
+          name={name}
+          age={age}
+          gender={gender}
+          birthDate={birthDate}
+        />
         <ZodiacInfo zodiac={zodiac} name={name} gender={gender} />
-        <CardsThrow showButtons={setShowButtons}/>
+        <CardsThrow showButtons={setShowButtons} />
       </div>
       {showButtons ? (
         <div className="container mt-5 mb-5 luck-button-group">
-          <Button
-            type="button"
-            className="btn btn-outline-light delete-background"
-            onClick={printDocument}
-            variant="outline-dark"
-          >
-            Descargar informacion en PDF
+          <Button className="luck-button-btn" onClick={printDocument}>
+            <span className="luck-button-btn-text">
+              Descargar informacion en PDF
+            </span>
           </Button>
-          <Button
-            type="button"
-            className="btn btn-outline-light delete-background"
-            onClick={goBack}
-            variant="outline-dark"
-          >
-            Realizar otra consulta
+          <Button className="luck-button-btn" onClick={goBack}>
+            <span className="luck-button-btn-text">Realizar otra consulta</span>
           </Button>
         </div>
       ) : null}

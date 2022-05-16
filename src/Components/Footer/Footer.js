@@ -8,7 +8,7 @@ function Footer() {
     return (
         <footer className="container footer mb-5">
             <hr className="line" />
-            <div className="contact mt-5 mb-5">
+            <div className="contact mb-5">
                 <a
                     className="contact-item"
                     href="https://www.linkedin.com/in/emilianosusmano/"
